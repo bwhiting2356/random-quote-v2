@@ -6,7 +6,6 @@ var colors = [
     "#99353F"
 ];
 
-
 var quotes = [
     {
         quote: "Eeeeeeeeeeee!!!",
