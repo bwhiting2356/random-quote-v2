@@ -63,7 +63,6 @@ function getRandomQuote() {
             break;  // breaks loop
         }
     }
-    
     return quotes[newQuoteIndex];  // return quote at that index
 }
 
@@ -74,15 +73,14 @@ function getRandomColor() {
         usedColorIndexes = [];
     }
     var newColorIndex;
-    for (;;) {   // infinite loop, will keep looking for a quote if it's already been used
+    for (;;) {   // infinite loop, will keep looking for a color if it's already been used
         newColorIndex = getRandomInt(0, colors.length);
-        if (usedColorIndexes.indexOf(newColorIndex) === -1) {  // tests to make sure it's a fresh quote
-            usedColorIndexes.push(newColorIndex);  // pushes the new quote index to the used quotes indexes array
+        if (usedColorIndexes.indexOf(newColorIndex) === -1) {  // tests to make sure it's a fresh colr
+            usedColorIndexes.push(newColorIndex);  // pushes the new color index to the used quotes indexes array
             break;  // breaks loop
         }
     }
-    
-    return colors[newColorIndex];  // return quote at that index
+    return colors[newColorIndex];  // return color at that index
 }
 
 var quote = document.getElementsByClassName('quote')[0];
