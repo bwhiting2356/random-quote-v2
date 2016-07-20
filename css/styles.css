@@ -3,9 +3,8 @@ body {
   background-color: #36b55c;
   color: white;
   font-family: 'Playfair Display', serif;
+  transition: .5s 
 }
-
-.nobr { white-space: nowrap }
 
 #quote-box {
   position: absolute;
@@ -59,6 +58,11 @@ body {
   content: ", ";
   font-style: normal;
 }
+.mood {
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+}
 
 #loadQuote {
   position: fixed;
@@ -75,7 +79,7 @@ body {
   transition: .5s ;
 }
 #loadQuote:hover {
-  background-color: rgba(255,255,255,.25);
+  opacity. .75;
 }
 #loadQuote:focus {
   outline: none;
