@@ -3,7 +3,8 @@ var colors = [
     "#0F997F",
     "#786AFF",
     "#5D0F99",
-    "#99353F"
+    "#99353F",
+    "#5F48F2"
 ];
 
 var quotes = [
@@ -22,11 +23,11 @@ var quotes = [
         mood: "slightly drunk"
     },
     {
-        quote: "I don't have any quotes.",
-        author: "Evan",
-        year: "5 minutes ago",
-        citation: "Kitchen",
-        mood: "aloof"
+        quote: "What is a thought?",
+        author: "Michael",
+        year: "Tuesday",
+        citation: "Doorway",
+        mood: "philosophical"
     },
     {
         quote: "Nice!",
@@ -41,6 +42,13 @@ var quotes = [
         year: "Last week",
         citation: "Basement",
         mood: "stern"
+    },
+    {
+        quote: "Today is a good day to have a good day.",
+        author: "Julie",
+        year: "Just now",
+        citation: "2 feet away",
+        mood: "optimistic"
     }
 ];
 
