@@ -7,6 +7,8 @@ var colors = [
     "#5F48F2"
 ];
 
+var color_list_length = 6;
+
 var quotes = [
     {
         quote: "Eeeeeeeeeeee!!!",
@@ -87,7 +89,7 @@ function getRandomColor() {
             break;  // breaks loop
         }
     }
-    return colors[newColorIndex];  // return color at that index
+    return newColorIndex;  // return color index
 }
 
 var quote = document.getElementsByClassName('quote')[0];
@@ -96,13 +98,13 @@ var citation = document.getElementsByClassName('citation')[0];
 var year = document.getElementsByClassName('year')[0];
 var mood = document.getElementsByClassName('mood')[0];
 
-
-// event listener to respond to "Show another quote" button clicks
-
 function changeColor() {
-    var newColor = getRandomColor();
-    document.body.style.backgroundColor = newColor;
-    document.getElementById("loadQuote").style.backgroundColor = newColor;
+    var newColorIndex = getRandomColor();
+    var newClass = "color-" + (newColorIndex + 1);
+    document.body.className = "";
+    document.body.classList.add(newClass);
+    document.getElementById("loadQuote").classList = "";
+    document.getElementById("loadQuote").classList.add(newClass);
 }
 
 function printQuote() {

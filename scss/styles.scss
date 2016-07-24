@@ -1,0 +1,120 @@
+$colors: #FF9000 #0F997F #786AFF #5D0F99 #99353F #5F48F2;
+
+body {
+  /*text-align: center;*/
+  background-color: #36b55c;
+  color: white;
+  font-family: 'Playfair Display', serif;
+  transition: .5s; 
+    @each $color in $colors {
+    $i: index($colors, $color);
+    &.color-#{$i} {
+      background: $color;
+    }
+  }
+}
+
+#quote-box {
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  right: 10%;
+  width: 80%;
+  line-height: .5;
+}
+.quote {
+  font-size: 4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  position: relative;
+  margin: 0;
+
+  &:before, &:after {
+    font-size: 6rem;
+    line-height: 2.5rem;
+    position: absolute;
+  }
+
+  &:before {
+    content: "“";
+    top: .25em;
+    left: -.5em;
+  }
+  &:after {
+    content: "”";
+    bottom: -.1em;
+    margin-left: .1em;
+    position: absolute;
+  }
+} 
+
+.source {
+  font-size: 1.25rem;;
+  letter-spacing: 0.05em;
+  line-height: 1.1;
+  text-align: right;
+  margin-right: 4em;
+
+  &:before {
+    content: "—";
+  }
+}
+
+.citation {
+  font-style: italic;
+  &:before {
+    content: ", ";
+    font-style: normal;
+  }
+}
+.year:before {
+  content: ", ";
+  font-style: normal;
+}
+.mood {
+  font-style: italic;
+  display: block;
+  margin-top: 10px;
+}
+
+#loadQuote {
+  position: fixed;
+  width: 12em;
+  display: inline-block;
+  left: 50%;
+  margin-left: -6em;
+  bottom: 150px;
+  border-radius: 4px;
+  border: 2px solid #fff;
+  color: #fff;
+  padding: 15px 0;
+  transition: .5s; 
+
+  @each $color in $colors {
+    $i: index($colors, $color);
+    &.color-#{$i} {
+      background: $color;
+      &:hover {
+        background: darken($color, 10%)
+      }
+    }
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
+
+@media (max-width: 420px) {
+  .quote {
+    font-size: 2.5rem;
+
+    &:before, &:after {
+      font-size: 3rem;
+    }
+  }
+
+  .source {
+    font-size: 1rem;
+  }
+}

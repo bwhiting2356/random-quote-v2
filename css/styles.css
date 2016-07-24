@@ -1,10 +1,22 @@
+@charset "UTF-8";
 body {
   /*text-align: center;*/
   background-color: #36b55c;
   color: white;
   font-family: 'Playfair Display', serif;
-  transition: .5s; 
-}
+  transition: .5s; }
+  body.color-1 {
+    background: #FF9000; }
+  body.color-2 {
+    background: #0F997F; }
+  body.color-3 {
+    background: #786AFF; }
+  body.color-4 {
+    background: #5D0F99; }
+  body.color-5 {
+    background: #99353F; }
+  body.color-6 {
+    background: #5F48F2; }
 
 #quote-box {
   position: absolute;
@@ -12,57 +24,51 @@ body {
   left: 10%;
   right: 10%;
   width: 80%;
-  line-height: .5;
-}
+  line-height: .5; }
+
 .quote {
   font-size: 4rem;
   font-weight: 400;
   line-height: 1.1;
   position: relative;
-  margin: 0;
-  } 
-.quote:before, .quote:after {
-  font-size: 6rem;
-  line-height: 2.5rem;
-  position: absolute;
-}
-.quote:before {
-  content: "“";
-  top: .25em;
-  left: -.5em;
-}
-.quote:after {
-  content: "”";
-  bottom: -.1em;
-  margin-left: .1em;
-  position: absolute;
-}
+  margin: 0; }
+  .quote:before, .quote:after {
+    font-size: 6rem;
+    line-height: 2.5rem;
+    position: absolute; }
+  .quote:before {
+    content: "“";
+    top: .25em;
+    left: -.5em; }
+  .quote:after {
+    content: "”";
+    bottom: -.1em;
+    margin-left: .1em;
+    position: absolute; }
+
 .source {
-  font-size: 1.25rem;;
+  font-size: 1.25rem;
   letter-spacing: 0.05em;
   line-height: 1.1;
   text-align: right;
-  margin-right: 4em;
-}
-.source:before {
-  content: "—";
-}
+  margin-right: 4em; }
+  .source:before {
+    content: "—"; }
+
 .citation {
-  font-style: italic;
-}
-.citation:before {
-  content: ", ";
-  font-style: normal;
-}
+  font-style: italic; }
+  .citation:before {
+    content: ", ";
+    font-style: normal; }
+
 .year:before {
   content: ", ";
-  font-style: normal;
-}
+  font-style: normal; }
+
 .mood {
   font-style: italic;
   display: block;
-  margin-top: 10px;
-}
+  margin-top: 10px; }
 
 #loadQuote {
   position: fixed;
@@ -74,25 +80,42 @@ body {
   border-radius: 4px;
   border: 2px solid #fff;
   color: #fff;
-  background-color: #36b55c;
   padding: 15px 0;
-  transition: .5s ;
-}
-#loadQuote:hover {
-  opacity. .75;
-}
-#loadQuote:focus {
-  outline: none;
-}
+  transition: .5s; }
+  #loadQuote.color-1 {
+    background: #FF9000; }
+    #loadQuote.color-1:hover {
+      background: #cc7300; }
+  #loadQuote.color-2 {
+    background: #0F997F; }
+    #loadQuote.color-2:hover {
+      background: #0a6b58; }
+  #loadQuote.color-3 {
+    background: #786AFF; }
+    #loadQuote.color-3:hover {
+      background: #4a37ff; }
+  #loadQuote.color-4 {
+    background: #5D0F99; }
+    #loadQuote.color-4:hover {
+      background: #410a6b; }
+  #loadQuote.color-5 {
+    background: #99353F; }
+    #loadQuote.color-5:hover {
+      background: #73282f; }
+  #loadQuote.color-6 {
+    background: #5F48F2; }
+    #loadQuote.color-6:hover {
+      background: #3518ef; }
+  #loadQuote:focus {
+    outline: none; }
 
 @media (max-width: 420px) {
   .quote {
-    font-size: 2.5rem;
-  }
-  .quote:before, .quote:after {
-    font-size: 3rem;
-  }
+    font-size: 2.5rem; }
+    .quote:before, .quote:after {
+      font-size: 3rem; }
+
   .source {
-    font-size: 1rem;
-  }
-}
+    font-size: 1rem; } }
+
+/*# sourceMappingURL=styles.css.map */
