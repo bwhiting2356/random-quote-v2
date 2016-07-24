@@ -1,12 +1,3 @@
-var colors = [
-    "#FF9000",
-    "#0F997F",
-    "#786AFF",
-    "#5D0F99",
-    "#99353F",
-    "#5F48F2"
-];
-
 var color_list_length = 6;
 
 var quotes = [
@@ -78,12 +69,12 @@ function getRandomQuote() {
 var usedColorIndexes = [];
 
 function getRandomColor() {
-    if (usedColorIndexes.length === colors.length) {
+    if (usedColorIndexes.length === color_list_length) {
         usedColorIndexes = [];
     }
     var newColorIndex;
     for (;;) {   // infinite loop, will keep looking for a color if it's already been used
-        newColorIndex = getRandomInt(0, colors.length);
+        newColorIndex = getRandomInt(0, color_list_length);
         if (usedColorIndexes.indexOf(newColorIndex) === -1) {  // tests to make sure it's a fresh colr
             usedColorIndexes.push(newColorIndex);  // pushes the new color index to the used quotes indexes array
             break;  // breaks loop
@@ -124,4 +115,3 @@ window.onload = function() {
     printQuote();
 };
 window.setInterval(printQuote, 30000);
-
